@@ -1,14 +1,29 @@
+import Cta from '@/components/CTA'
+import CompanionCard from '@/components/CompanionCard'
+import CompanionList from '@/components/CompanionList'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const Page = () => {
   return (
-    <div>
-      <h1 className=' text-2xl underline '>
-        Welcome to my saas app
+    <main>
+      <h1>
+        Popular Companions
       </h1>
-      <Button>Get Started</Button>
-    </div>
+     <section className='home-section'>
+        <CompanionCard
+        id="123"
+        name=''
+        />
+        <CompanionCard/>
+        <CompanionCard/>
+     </section>
+
+     <section className=' home-section'>
+       <CompanionList/>
+       <Cta/>
+     </section>
+    </main>
   )
 }
 
