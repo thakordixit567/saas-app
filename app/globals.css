@@ -5,49 +5,49 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: #B85042;
+  --primary: #E43636;
 
-  --cta: #B85042;
-  --cta-gold: #E7E8D1;
+  --cta: #E43636;
+  --cta-gold: #E2DDB4;
   --radius: 0.625rem;
 
-  --card: #E7E8D1;
-  --card-foreground: #B85042;
-  --popover: #E7E8D1;
-  --popover-foreground: #B85042;
+  --card: #F6EFD2;
+  --card-foreground: #000000;
+  --popover: #F6EFD2;
+  --popover-foreground: #000000;
 
-  --primary-foreground: #E7E8D1;
-  --secondary: #A7BEAE;
-  --secondary-foreground: #B85042;
+  --primary-foreground: #F6EFD2;
+  --secondary: #E2DDB4;
+  --secondary-foreground: #000000;
 
-  --muted: #E7E8D1;
-  --muted-foreground: #A7BEAE;
-  --accent: #A7BEAE;
-  --accent-foreground: #B85042;
+  --muted: #E2DDB4;
+  --muted-foreground: #000000;
+  --accent: #E2DDB4;
+  --accent-foreground: #000000;
 
-  --destructive: #B85042;
+  --destructive: #E43636;
 
-  --border: #A7BEAE;
-  --input: #A7BEAE;
-  --ring: #B85042;
+  --border: #E2DDB4;
+  --input: #E2DDB4;
+  --ring: #E43636;
 
-  --chart-1: #B85042;
-  --chart-2: #A7BEAE;
-  --chart-3: #E7E8D1;
-  --chart-4: #B85042;
-  --chart-5: #A7BEAE;
+  --chart-1: #E43636;
+  --chart-2: #E2DDB4;
+  --chart-3: #F6EFD2;
+  --chart-4: #E43636;
+  --chart-5: #E2DDB4;
 
-  --sidebar: #E7E8D1;
-  --sidebar-foreground: #B85042;
-  --sidebar-primary: #B85042;
-  --sidebar-primary-foreground: #E7E8D1;
-  --sidebar-accent: #A7BEAE;
-  --sidebar-accent-foreground: #B85042;
-  --sidebar-border: #A7BEAE;
-  --sidebar-ring: #B85042;
+  --sidebar: #F6EFD2;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #E43636;
+  --sidebar-primary-foreground: #F6EFD2;
+  --sidebar-accent: #E2DDB4;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #E2DDB4;
+  --sidebar-ring: #E43636;
 
-  --background: #E7E8D1;
-  --foreground: #2c2c2c;
+  --background: #F6EFD2;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -98,44 +98,44 @@ body {
 }
 
 .dark {
-  --background: #2c2c2c;
-  --foreground: #E7E8D1;
+  --background: #000000;
+  --foreground: #F6EFD2;
 
-  --card: #B85042;
-  --card-foreground: #E7E8D1;
-  --popover: #B85042;
-  --popover-foreground: #E7E8D1;
+  --card: #E43636;
+  --card-foreground: #F6EFD2;
+  --popover: #E43636;
+  --popover-foreground: #F6EFD2;
 
-  --primary: #A7BEAE;
-  --primary-foreground: #2c2c2c;
-  --secondary: #E7E8D1;
-  --secondary-foreground: #B85042;
+  --primary: #E2DDB4;
+  --primary-foreground: #000000;
+  --secondary: #F6EFD2;
+  --secondary-foreground: #E43636;
 
-  --muted: #A7BEAE;
-  --muted-foreground: #E7E8D1;
-  --accent: #A7BEAE;
-  --accent-foreground: #2c2c2c;
+  --muted: #E2DDB4;
+  --muted-foreground: #F6EFD2;
+  --accent: #E2DDB4;
+  --accent-foreground: #000000;
 
-  --destructive: #B85042;
+  --destructive: #E43636;
 
-  --border: #A7BEAE;
-  --input: #A7BEAE;
-  --ring: #B85042;
+  --border: #E2DDB4;
+  --input: #E2DDB4;
+  --ring: #E43636;
 
-  --chart-1: #A7BEAE;
-  --chart-2: #B85042;
-  --chart-3: #E7E8D1;
-  --chart-4: #B85042;
-  --chart-5: #A7BEAE;
+  --chart-1: #E2DDB4;
+  --chart-2: #E43636;
+  --chart-3: #F6EFD2;
+  --chart-4: #E43636;
+  --chart-5: #E2DDB4;
 
-  --sidebar: #2c2c2c;
-  --sidebar-foreground: #E7E8D1;
-  --sidebar-primary: #B85042;
-  --sidebar-primary-foreground: #E7E8D1;
-  --sidebar-accent: #A7BEAE;
-  --sidebar-accent-foreground: #2c2c2c;
-  --sidebar-border: #A7BEAE;
-  --sidebar-ring: #B85042;
+  --sidebar: #000000;
+  --sidebar-foreground: #F6EFD2;
+  --sidebar-primary: #E43636;
+  --sidebar-primary-foreground: #F6EFD2;
+  --sidebar-accent: #E2DDB4;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #E2DDB4;
+  --sidebar-ring: #E43636;
 }
 
 @layer base {
@@ -182,7 +182,7 @@ body {
     @apply bg-cta-gold rounded-4xl px-3 py-1.5 text-black;
   }
   .btn-primary {
-    @apply bg-primary text-white rounded-xl cursor-pointer px-4 py-2 flex items-center gap-2;
+    @apply bg-black text-white rounded-xl cursor-pointer px-4 py-2 flex items-center gap-2;
   }
   .navbar {
     @apply flex items-center justify-between mx-auto w-full px-14 py-4 bg-white max-sm:px-4;
@@ -198,7 +198,7 @@ body {
   }
 
   .companion-section {
-    @apply border-2 border-orange-500 w-2/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
+    @apply border-2 border-[#E43636] w-2/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
   }
 
   .companion-avatar {
