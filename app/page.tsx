@@ -3,52 +3,37 @@ import CompanionCard from '@/components/CompanionCard'
 import CompanionList from '@/components/CompanionList'
 import { Button } from '@/components/ui/button'
 import { recentSessions } from '@/constants'
+import { getAllCompanions, getRecentSessions } from '@/lib/actions/companion.actions'
+import { getSubjectColor } from '@/lib/utils'
 import React from 'react'
 
-const Page = () => {
+const Page = async () => {
+    const companions = await getAllCompanions({ limit: 3 });
+    const recentSessionsCompanions = await getRecentSessions(10);
+
   return (
     <main>
-      <h1>
-        Popular Companions
-      </h1>
-     <section className='home-section'>
-        <CompanionCard
-        id="123"
-        name='Activation Functions and Their Impact on Learning'
-        topic='Neural Networks for Image Classification'
-        subject='scince'
-        duration={45}
-        color='#ffda6e'
-        />
-        
-        <CompanionCard
-        id="456"
-        name='Applications of Derivatives in Real Life'
-        topic='Derivatives & Integrals'
-        subject='Maths'
-        duration={30}
-        color='#e5d0ff'
-        />
-        
-        <CompanionCard
-        id="789"
-        name='Verba the Vocabulary Builder'
-        topic='Language'
-        subject='English Literature '
-        duration={30}
-        color='#bde7ff'
-        />
-    
-     </section>
+      <h1>Popular Companions</h1>
 
-     <section className=' home-section'>
-       <CompanionList
-        title='Recently Complete Sessions'
-        companions={recentSessions}
-        classNames='w-2/3 max-lg:w-full'
-       />
-       <Cta/>
-     </section>
+        <section className="home-section">
+            {companions.map((companion) => (
+                <CompanionCard
+                    key={companion.id}
+                    {...companion}
+                    color={getSubjectColor(companion.subject)}
+                />
+            ))}
+
+        </section>
+
+        <section className="home-section">
+            <CompanionList
+                title="Recently completed sessions"
+                companions={recentSessionsCompanions}
+                classNames="w-2/3 max-lg:w-full"
+            />
+            <Cta />
+        </section>
     </main>
   )
 }
